@@ -20,3 +20,5 @@ Required columns:
 - MoA: `DrugID`, `TargetID`, `label`
 
 Large raw datasets are not included in this clean release.
+
+Restricted case-study files from the TargetMol L2200 Tyrosine Kinase Inhibitor Library are not redistributed. If you have licensed access to those files, keep them locally under `data/case_study/`; this path is ignored by Git.

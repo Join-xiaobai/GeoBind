@@ -70,6 +70,8 @@ Typical labels and ID columns:
 
 The release repository does not include large raw datasets or generated outputs. Generated preprocessing files and training results are written locally during runs.
 
+Case-study source files from the TargetMol L2200 Tyrosine Kinase Inhibitor Library are third-party, license-controlled data and are not redistributed in this public repository. Place restricted local case-study files under `data/case_study/` when reproducing the corresponding analysis.
+
 ## Usage
 
 Edit `TASK_NAME` and dataset settings in `main.py`, then run:
@@ -93,3 +95,4 @@ The main model is implemented in `model/GeoBind.py`. It contains:
 
 - `result/` is intentionally ignored and should contain generated training outputs only.
 - Large model checkpoints and pretrained model weights should be stored with Git LFS or downloaded separately.
+- Restricted third-party case-study files, including supplier SDF and workbook files, are intentionally ignored by Git.

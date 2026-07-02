@@ -335,13 +335,11 @@ def read_raw_files(mode: str, input_dir: str, dataset_name: str) -> tuple:
         interact_path = os.path.join(input_dir, DTA_FILES["interaction"])
         _, affinity_matrix = read_interaction_file(interact_path, mode)
         
-        # 核心修改：仅对MTC数据集做索引对齐，其他数据集跳过（保证兼容性）
+        # Align affinity rows for local MTC case-study matrices only.
         if dataset_name.lower() == "mtc":
-            # 用有效药物的原始索引对齐Y矩阵
             valid_original_indices = drugs["original_index"].tolist()
-            # 截取Y矩阵中有效药物对应的行
             affinity_matrix = affinity_matrix[valid_original_indices, :]
-            print(f"🔍 MTC数据集专属：按有效药物索引裁剪Y矩阵 → 新形状：{affinity_matrix.shape}")
+            print(f"MTC case-study matrix aligned to valid drug indices: {affinity_matrix.shape}")
         
         # 严格校验矩阵形状与药物/蛋白数量匹配
         if affinity_matrix.shape != (len(drugs), len(proteins)):

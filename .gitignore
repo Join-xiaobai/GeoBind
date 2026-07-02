@@ -13,6 +13,12 @@ outputs/
 logs/
 *.log
 
+# Restricted third-party case-study data
+case_study_source/
+data/case_study/
+*.sdf
+*.xlsx
+
 # Large local model folders
 data_preprocessing/models/esm2_t33_650M_UR50D/
 data_preprocessing/models/chemberta/
