@@ -6,7 +6,7 @@ GeoBind is a structure-free, geometry-aware deep learning framework for drug-tar
 - Drug-target interaction prediction (DTI)
 - Mechanism-of-action prediction (MoA)
 
-This repository contains the clean core implementation extracted from `Join-xiaobai/SeqSpaPoint` and renamed to GeoBind. Ablation experiments, case-study materials, and visualization outputs are intentionally removed.
+This repository contains the clean core implementation of GeoBind for reproducible drug-target modeling experiments.
 
 ## Repository Structure
 
@@ -93,4 +93,3 @@ The main model is implemented in `model/GeoBind.py`. It contains:
 
 - `result/` is intentionally ignored and should contain generated training outputs only.
 - Large model checkpoints and pretrained model weights should be stored with Git LFS or downloaded separately.
-- Removed from the original repository: `ablation_experiment/`, `case_study/`, and `visualize/`.
