@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+.env
+
+# Generated outputs
+result/
+outputs/
+logs/
+*.log
+
+# Large local model folders
+data_preprocessing/models/esm2_t33_650M_UR50D/
+data_preprocessing/models/chemberta/
+
+# Not part of the clean GeoBind release
+ablation_experiment/
+case_study/
+visualize/
+.ipynb_checkpoints/
